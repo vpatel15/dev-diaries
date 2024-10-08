@@ -5,11 +5,11 @@ import Footer from "../../Components/Footer";
 import Head from "next/head";
 import BlogInner from "../../Components/BlogInner";
 import BlogShare from "../../Components/BlogShare";
-import Comments from "../../Components/Comments";
-import { SWRConfig } from "swr";
+// import Comments from "../../Components/Comments";
+// import { SWRConfig } from "swr";
 import { remarkHeadingId } from "remark-custom-heading-id";
 import { getHeadings } from "../../Lib/GetHeadings";
-import LikeBtn from "../../Components/LikeBtn";
+// import LikeBtn from "../../Components/LikeBtn";
 
 export const getStaticPaths = () => {
   const allBlogs = getAllBlogPosts();
@@ -83,12 +83,12 @@ function id({ data, content, id, headings, topics }) {
         <Navbar topics={topics} />
         <div className="py-24">
           <BlogInner data={data} content={content} headings={headings} />
-          <LikeBtn id={id} />
+          {/* <LikeBtn id={id} /> */}
           <BlogShare data={data} />
 
-          <SWRConfig>
+          {/* <SWRConfig>
             <Comments id={id} />
-          </SWRConfig>
+          </SWRConfig> */}
 
           <Footer />
         </div>
