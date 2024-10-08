@@ -83,6 +83,7 @@ function id({ data, content, id, headings, topics }) {
         <Navbar topics={topics} />
         <div className="py-24">
           <BlogInner data={data} content={content} headings={headings} />
+          <p>{id}</p>
           {/* <LikeBtn id={id} /> */}
           <BlogShare data={data} />
 
